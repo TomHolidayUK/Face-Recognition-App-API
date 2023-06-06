@@ -1,6 +1,9 @@
 {
   "name": "node",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.16.0"
+  },
   "main": "script.js",
   "scripts": {
     "start": "nodemon server.js"
