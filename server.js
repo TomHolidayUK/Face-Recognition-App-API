@@ -154,6 +154,9 @@ app.listen(process.env.PORT || 3000, ()=> {
     console.log(`app is running on port ${process.env.PORT}`); 
 })
 
+// "devDependencies": {
+//     "nodemon": "^2.0.22"
+//   }
 
 // app.listen(3000, ()=> {
 //     console.log('app is running on port 3000'); 
@@ -167,3 +170,31 @@ app.listen(process.env.PORT || 3000, ()=> {
 // bcrypt.compare("veggies", hash, function(err, res) {
 //     // res = false
 // });
+
+
+// package.json
+
+// {
+//     "name": "facerecognitionapp-api",
+//     "version": "1.0.0",
+//     "description": "",
+//     "main": "index.js",
+//     "scripts": {
+//       "start": "node server.js",
+//       "start:dev": "nodemon server.js"
+//     },
+//     "author": "",
+//     "license": "ISC",
+//     "dependencies": {
+//       "bcrypt-nodejs": "^0.0.3",
+//       "body-parser": "^1.20.2",
+//       "cors": "^2.8.5",
+//       "express": "^4.18.2",
+//       "knex": "^2.4.2",
+//       "pg": "^8.11.0"
+//     },
+//     "devDependencies": {
+//     "nodemon": "^2.0.22"
+//     }
+//   }
+  
