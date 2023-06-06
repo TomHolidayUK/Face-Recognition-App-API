@@ -5,6 +5,9 @@
     "node": "16.16.0"
   },
   "main": "script.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
