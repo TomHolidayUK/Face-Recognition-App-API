@@ -47,7 +47,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res)=> {
-    res.send('success')
+    res.send('slag')
 })
 
 app.post('/signin', (req, res) => {
@@ -200,7 +200,7 @@ app.listen(process.env.PORT || 3000, ()=> {
   
 
 // git add .
-// git commit -m "more changes 3"
+// git commit -m "more changes 4"
 // git push heroku main
 
 // heroku logs --tail
