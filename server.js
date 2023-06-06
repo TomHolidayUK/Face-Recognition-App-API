@@ -8,11 +8,10 @@ const knex = require('knex')
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
-      port : 5432,
-      user : 'Tom',
-      password : '',
-      database : 'smart-brain'
+      connectionString: process.env.DATABASE_URL,
+      ssl: {
+        rejectUnauthorized: false
+      }
     }
   });
 
@@ -200,7 +199,7 @@ app.listen(process.env.PORT || 3000, ()=> {
   
 
 // git add .
-// git commit -m "more changes 4"
+// git commit -m "updating database"
 // git push heroku main
 
 // heroku logs --tail
