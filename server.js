@@ -15,32 +15,8 @@ const db = knex({
     }
   });
 
-// db.select('*').from('users').then(data => {
-//     console.log(data)
-// });
 
 const app = express();
-
-// const database = {
-//     users: [
-//         {
-//             id: '123',
-//             name: 'John',
-//             email: 'john@gmail.com',
-//             password: 'Mezcal',
-//             entries: 0,
-//             joined: new Date(),
-//         },
-//         {
-//             id: '124',
-//             name: 'Sally',
-//             email: 'sally@hotmail.com',
-//             password: 'Salop',
-//             entries: 0,
-//             joined: new Date(),
-//         }
-//     ]
-// } 
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -134,69 +110,18 @@ app.put('/image', (req, res) => {
     .catch(err => res.status(400).json('Unable to get entries'))
 })
 
-// app.put('/image', (req, res) => {
-//     const { id } = req.body;
-//     db('users').where('id', '=', id)
-//     .increment('entries', 1)
-//     .returning('entries')
-//     .then(entries => {
-//       // If you are using knex.js version 1.0.0 or higher this now returns an array of objects. Therefore, the code goes from:
-//       // entries[0] --> this used to return the entries
-//       // TO
-//       // entries[0].entries --> this now returns the entries
-//       res.json(entries[0].entries);
-//     })
-//     .catch(err => res.status(400).json('unable to get entries'))
-//   })
 
-app.listen(process.env.PORT || 3000, ()=> {
-    console.log(`app is running on port ${process.env.PORT}`); 
-})
-
-// "devDependencies": {
-//     "nodemon": "^2.0.22"
-//   }
-
-// app.listen(3000, ()=> {
-//     console.log('app is running on port 3000'); 
+// app.listen(process.env.PORT || 3000, ()=> {
+//     console.log(`app is running on port ${process.env.PORT}`); 
 // })
 
-
-// // Load hash from your password DB.
-// bcrypt.compare("bacon", hash, function(err, res) {
-//     // res == true
-// });
-// bcrypt.compare("veggies", hash, function(err, res) {
-//     // res = false
-// });
+app.listen(3000, ()=> {
+    console.log('app is running on port 3000'); 
+})
 
 
-// package.json
 
-// {
-//     "name": "facerecognitionapp-api",
-//     "version": "1.0.0",
-//     "description": "",
-//     "main": "index.js",
-//     "scripts": {
-//       "start": "node server.js",
-//       "start:dev": "nodemon server.js"
-//     },
-//     "author": "",
-//     "license": "ISC",
-//     "dependencies": {
-//       "bcrypt-nodejs": "^0.0.3",
-//       "body-parser": "^1.20.2",
-//       "cors": "^2.8.5",
-//       "express": "^4.18.2",
-//       "knex": "^2.4.2",
-//       "pg": "^8.11.0"
-//     },
-//     "devDependencies": {
-//     "nodemon": "^2.0.22"
-//     }
-//   }
-  
+
 
 // git add .
 // git commit -m "updating database"
